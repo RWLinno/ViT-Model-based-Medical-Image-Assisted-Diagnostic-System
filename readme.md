@@ -23,6 +23,25 @@ pip3 install -r requirements.txt
 
 3. Download the **flower_photos dataset**, or you can just use the code in train.ipynb to unzip `flower_photos.tar`
 
+```
+gdown https://drive.google.com/uc?id=1J5UryTNkXDSEpbmPoMH3Hry9iRXwaSES
+```
+
+4. You can optionally download my pre-trained model and put it into the `models` folder
+
+```
+# ViT_pre_train_5_epochs.pth
+gdown https://drive.google.com/uc?id=1ejwfSjadBnxJy2-Q5sZUbJFzt6F3jz_y
+
+# ViT_pre_train_10_epochs.pth
+gdown https://drive.google.com/uc?id=1cRpmA3fGrHx_mOIdf9ZFBPBW6dIubKhx
+
+# ViT_pre_train_10_epochs.pth
+gdown https://drive.google.com/uc?id=19kc-YlXcjNzkBQ8iJkPX3OklSawt_myS
+```
+
+
+
 ### Introduction
 
 Our project files are structured as follows
