@@ -12,10 +12,15 @@ class CustomDataset(Dataset):
         return len(self.images_path)
 
     def __getitem__(self, item):
-        img = Image.open(self.images_path[item])
+        try:
+            img = Image.open(self.images_path[item])
+        except Exception as e:
+            print(f"Error opening image: {self.images_path[item]}, error: {e}")
+            return
         # RGB为彩色图片，L为灰度图片
         if img.mode != 'RGB':
-            raise ValueError("image: {} isn't RGB mode.".format(self.images_path[item]))
+            img = img.convert('RGB')
+            # raise ValueError("image: {} isn't RGB mode.".format(self.images_path[item]))
         label = self.images_class[item]
 
         if self.transform is not None:

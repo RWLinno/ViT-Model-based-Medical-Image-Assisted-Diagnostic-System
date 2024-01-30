@@ -18,7 +18,7 @@ def read_split_data(root:str,val_rate:float=0.3, plot = True):
     val_data = [] #record paths for validation_datas
     val_label = [] #record paths for validation_labels
     every_class_num = [] #record number for each class
-    supported_ext = [".jpg",".JPG",".png","PNG"]
+    supported_ext = [".jpg",".JPG",".png",".PNG",".jpeg",".JPEG"]
     # traverse each folder
     for cls in class_list:
         cls_path = os.path.join(root,cls)

@@ -98,16 +98,75 @@ MyViT/
 
 
 
-### Acknowledgement
+# Use ViT on the ChestXRay dataset
+
+public dataset link: https://data.mendeley.com/datasets/rscbjbr9sj/2
+
+you can use the same way to load the dataset and you get **2** folders:
+
+```
+MyViT/
+│───README.md
+└───data/
+│   │───ChestXRay/
+│   │   │   NORMAL/
+│   │   │   PNEUMONIA/
+```
+
+ 
+
+run`chest_main.ipynb` and that includes what we coded for the training and prediction of flower photos.
+
+
+
+I should tell you to change the support suffix in `utils.py` so we can deal with these pictures.
+
+
+
+##### Results
+
+- **Distribution**:  for NORMAL and PNEUMONIA, totally 2 classes.
+
+![image-20240130190633825](https://s2.loli.net/2024/01/30/wfplyo7WcaXLD9h.png)
+
+- **Training model**
+
+you can modify the parameters such as epoch_num or learning_rate so that you can achieve a better accuracy and lower loss.
+
+![image-20240131010554874](https://s2.loli.net/2024/01/31/23JYbfFdo9xj4uE.png)
+
+- **Prediction ChestXRAY pictures**
+
+![image-20240131010817488](https://s2.loli.net/2024/01/31/gB3sobLAZh1FcHN.png)
+
+![image-20240131010827258](https://s2.loli.net/2024/01/31/n8sTcRBU4K5ku92.png)
+
+Above are the sample and the probability.
+
+
+
+you can download my pre-trained model for ChestXRAY visual data.
+
+```
+# ViT_for_chest.pth
+gdown https://drive.google.com/uc?id=1YRYNG4uvMyojk3yS77_umATW_MZfm8M3
+```
+
+
+
+
+
+### Acknowledgment
 
 ##### Contributors
 
 - [RWLinno](https://github.com/RWLinno)
 - [Aritst](https://github.com/IcecreamArtist)
 
+
+
 ##### References
 
 - [WZMIAOMIAO](https://github.com/WZMIAOMIAO/deep-learning-for-image-processing/tree/master)
 - https://www.sohu.com/a/677833784_121119001
 - https://zhuanlan.zhihu.com/p/385406085
-- https://blog.csdn.net/weixin_44791964/article/details/122637701
